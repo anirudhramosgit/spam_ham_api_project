@@ -8,7 +8,7 @@ class Message(BaseModel):
 
 app = FastAPI(title="Spam Detection API")
 
-model_path = "app/model/linear_svm_spam_model.joblib"
+model_path = "model/linear_svm_spam_model.joblib"
 model = joblib.load(model_path)  # Load the pipeline directly
 
 @app.post("/predict")
